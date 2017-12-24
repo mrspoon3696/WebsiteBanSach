@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="899e812cd954411d9a6a0db5f8c33049" Name="Diagram1">
+        <EntityTypeShape EntityType="SACHModel.Admin" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.CHITIETDONHANG" Width="1.5" PointX="7.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.CHITIETSACH" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.CHUDE" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.DONHANG" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.KHACHHANG" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.LienKet" Width="1.5" PointX="7.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.NHAXUATBAN" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.QuangCao" Width="1.5" PointX="9.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.SACH" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.sysdiagram" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.TACGIA" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SACHModel.TinTuc" Width="1.5" PointX="9.75" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="SACHModel.FK_CHITIETDONHANG_CHITIETSACH" ManuallyRouted="false" />
+        <AssociationConnector Association="SACHModel.FK_CHITIETDONHANG_DONHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="SACHModel.FK_CHITIETSACH_CHUDE" ManuallyRouted="false" />
+        <AssociationConnector Association="SACHModel.FK_CHITIETSACH_NHAXUATBAN" ManuallyRouted="false" />
+        <AssociationConnector Association="SACHModel.FK_CHITIETSACH_SACH" ManuallyRouted="false" />
+        <AssociationConnector Association="SACHModel.FK_DONHANG_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="SACHModel.FK_SACH_TACGIA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

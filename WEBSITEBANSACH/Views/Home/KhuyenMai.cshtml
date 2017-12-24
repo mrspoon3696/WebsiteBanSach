@@ -1,0 +1,79 @@
+﻿@model IEnumerable<WEBSITEBANSACH.Models.CHITIETSACH>
+
+
+
+@{
+    ViewBag.Title = "KhuyenMai";
+    Layout = "~/Views/Shared/Mylayout.cshtml";
+}
+
+<div  style="text-align:center;"class="row">
+    <div style="COLOR:red; font-size:30px">
+        <div style="align-content:center;"><img src="~/hinhanh/giam-gia-khung.jpg" width="350" height="250"  /></div>  
+        SẢN PHẨM KHUYẾN MÃI
+
+       
+    </div>
+</div>
+    <div></div>
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail" style="text-align:center;">
+              
+                    <div id="anhbia">
+
+                        <a href="/Sachmoi/chitiet/@item.MaCTS">
+                            <img src="~/hinhanh/sach/@item.Anhbia" width="250" height="300" />
+                            </a>
+
+
+</div>
+               
+                    <div id="tensach">@item.TensachCT</div>
+
+
+
+                    <div class="ratings">
+                        <p class="pull-right"><div class="btn btn-danger " style="z-index:-1">-@item.phantram% </div></p>
+                        <p class="pull-right">
+                            <div class="pull-right">
+                                <button class="btn btn-sm btn-warning">
+                                    <span class="glyphicon glyphicon-heart"></span>
+                                </button>
+                                <button class="btn btn-sm btn-success">
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </button>
+
+                                <button class="btn btn-sm btn-info">
+
+                                    <span class="glyphicon glyphicon-gift"></span>
+
+                                </button>
+
+
+
+                            </div>
+
+                        </p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                        </p>
+
+                    </div>
+
+</div>
+        </div>
+
+    }
+
+
+
+</div>
