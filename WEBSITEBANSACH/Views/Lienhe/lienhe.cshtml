@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "lienhe";
+    Layout = "~/Views/Shared/layout.cshtml";
+}
+
+
+<h2 style="font-family: Berlin Sans FB Demi; text-align:center; color: red; ">BOOKSTORE</h2>
+
+<div style="font-size: 19px; ">Địa chỉ : 51 Phạm Viết Chánh Nguyễn Cư Trinh, Quận 1, Hồ Chí Minh</div>
+<div style="font-size: 19px;">Điện thoại:08 33433 34334 - 08 2343 3434 - 1900 9201 (27/7)</div>
+<div style="font-size: 19px; ">Email: WEBSITEBANSACH@gmail.com</div>
+<div id="googleMap" style="font-size: 19px; ">
+    BẢN ĐỒ
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5832242519045!2d106.68078381435029!3d10.766568842328212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f18b7f68ff5%3A0xcd289569b285e522!2sMinh+Khai+Bookstore!5e0!3m2!1svi!2s!4v1494170989459" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+@*<script type="text/javascript">
+        var gmap = new google.maps.LatLng(10.76601, 106.6829);
+        var marker;
+        function initialize() {
+            var mapProp = {
+                center: new google.maps.LatLng(10.76601, 106.6829),
+                zoom: 16,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap")
+            , mapProp);
+
+            var styles = [
+              {
+                  featureType: 'road.arterial',
+                  elementType: 'all',
+                  stylers: [
+                    { hue: '#fff' },
+                    { saturation: 100 },
+                    { lightness: -48 },
+                    { visibility: 'on' }
+                  ]
+              }, {
+                  featureType: 'road',
+                  elementType: 'all',
+                  stylers: [
+
+                  ]
+              },
+              {
+                  featureType: 'water',
+                  elementType: 'geometry.fill',
+                  stylers: [
+                      { color: '#adc9b8' }
+                  ]
+              }, {
+                  featureType: 'landscape.natural',
+                  elementType: 'all',
+                  stylers: [
+                      { hue: '#809f80' },
+                      { lightness: -35 }
+                  ]
+              }
+            ];
+
+            var styledMapType = new google.maps.StyledMapType(styles);
+            map.mapTypes.set('Styled', styledMapType);
+
+            marker = new google.maps.Marker({
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: gmap
+            });
+            google.maps.event.addListener(marker, 'click', toggleBounce);
+        }
+
+        function toggleBounce() {
+
+            if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>*@
+
+
+
+
+
+
