@@ -24,6 +24,17 @@ namespace WEBSITEBANSACH.Controllers
             return View();
         }
 
+<<<<<<< .merge_file_a02628
+        //////////////////////////////////////////KHACH HANG/////////////////////////////////////
+        public ActionResult KHACHHANG(int? page)
+        {
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            return View(db.KHACHHANGs.ToList().OrderBy(n => n.MaKH).ToPagedList(pageNumber, pageSize));
+        }
+        [HttpGet]
+        public ActionResult themKH()
+=======
         public ActionResult Sach(int? page)
         {
             int pageSize = 10;
@@ -154,6 +165,7 @@ namespace WEBSITEBANSACH.Controllers
         }
         [HttpGet]
         public ActionResult themchude()
+>>>>>>> .merge_file_a03968
         {
 
 
@@ -161,101 +173,18 @@ namespace WEBSITEBANSACH.Controllers
         }
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult themchude(CHUDE chude)
-        {
-
-
-            if (ModelState.IsValid)
-            {
-
-                db.CHUDEs.Add(chude);
-                db.SaveChanges();
-            }
-            return RedirectToAction("chude");
-        }
-        [HttpGet]
-        public ActionResult xoacd(int macd)
-        {
-            //lay doi tuong theo mã 
-            CHUDE cd = db.CHUDEs.SingleOrDefault(n => n.MaChuDe == macd);
-            ViewBag.Masach = cd.MaChuDe;
-            if (cd == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-
-            return View(cd);
-
-        }
-        [HttpPost, ActionName("xoacd")]
-
-        public ActionResult Xacnhanchude(int macd)
-        {
-            CHUDE cd = db.CHUDEs.SingleOrDefault(n => n.MaChuDe == macd);
-            ViewBag.Masach = cd.MaChuDe;
-            if (cd == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-            db.CHUDEs.Remove(cd);
-            db.SaveChanges();
-            return RedirectToAction("chude");
-
-        }
-        [HttpGet]
-        public ActionResult suachude(int macd)
-        {
-            //lay doi tuong theo mã 
-            CHUDE cd = db.CHUDEs.SingleOrDefault(n => n.MaChuDe == macd);
-
-            if (cd == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-
-            return View(cd);
-
-        }
-        [HttpPost]
-        [ValidateInput(false)]
-        public ActionResult suachude(CHUDE chudesach, FormCollection f)
-        {
-
-            if (ModelState.IsValid)
-            {
-                db.Entry(chudesach).State = System.Data.EntityState.Modified;
-                db.SaveChanges();
-            }
-
-            return RedirectToAction("chude");
-
-        }
-        //////////////////////////////////////////KHACH HANG/////////////////////////////////////
-        public ActionResult KHACHHANG(int? page)
-        {
-            int pageSize = 10;
-            int pageNumber = (page ?? 1);
-            return View(db.KHACHHANGs.ToList().OrderBy(n => n.MaKH).ToPagedList(pageNumber, pageSize));
-        }
-        [HttpGet]
-        public ActionResult themKH()
-        {
-
-
-            return View();
-        }
-        [HttpPost]
-        [ValidateInput(false)]
+<<<<<<< .merge_file_a02628
         public ActionResult themKH(KHACHHANG kh)
+=======
+        public ActionResult themchude(CHUDE chude)
+>>>>>>> .merge_file_a03968
         {
 
 
             if (ModelState.IsValid)
             {
 
+<<<<<<< .merge_file_a02628
                 db.KHACHHANGs.Add(kh);
                 db.SaveChanges();
             }
@@ -268,11 +197,26 @@ namespace WEBSITEBANSACH.Controllers
             KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.MaKH == maKH);
             ViewBag.Masach = kh.MaKH;
             if (kh == null)
+=======
+                db.CHUDEs.Add(chude);
+                db.SaveChanges();
+            }
+            return RedirectToAction("chude");
+        }
+        [HttpGet]
+        public ActionResult xoacd(int macd)
+        {
+            //lay doi tuong theo mã 
+            CHUDE cd = db.CHUDEs.SingleOrDefault(n => n.MaChuDe == macd);
+            ViewBag.Masach = cd.MaChuDe;
+            if (cd == null)
+>>>>>>> .merge_file_a03968
             {
                 Response.StatusCode = 404;
                 return null;
             }
 
+<<<<<<< .merge_file_a02628
             return View(kh);
 
         }
@@ -283,10 +227,23 @@ namespace WEBSITEBANSACH.Controllers
             KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.MaKH == maKH);
             ViewBag.Masach = kh.MaKH;
             if (kh == null)
+=======
+            return View(cd);
+
+        }
+        [HttpPost, ActionName("xoacd")]
+
+        public ActionResult Xacnhanchude(int macd)
+        {
+            CHUDE cd = db.CHUDEs.SingleOrDefault(n => n.MaChuDe == macd);
+            ViewBag.Masach = cd.MaChuDe;
+            if (cd == null)
+>>>>>>> .merge_file_a03968
             {
                 Response.StatusCode = 404;
                 return null;
             }
+<<<<<<< .merge_file_a02628
             db.KHACHHANGs.Remove(kh);
             db.SaveChanges();
             return RedirectToAction("KHACHHANG");
@@ -299,21 +256,44 @@ namespace WEBSITEBANSACH.Controllers
             KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.MaKH == makh);
 
             if (kh == null)
+=======
+            db.CHUDEs.Remove(cd);
+            db.SaveChanges();
+            return RedirectToAction("chude");
+
+        }
+        [HttpGet]
+        public ActionResult suachude(int macd)
+        {
+            //lay doi tuong theo mã 
+            CHUDE cd = db.CHUDEs.SingleOrDefault(n => n.MaChuDe == macd);
+
+            if (cd == null)
+>>>>>>> .merge_file_a03968
             {
                 Response.StatusCode = 404;
                 return null;
             }
 
+<<<<<<< .merge_file_a02628
             return View(kh);
+=======
+            return View(cd);
+>>>>>>> .merge_file_a03968
 
         }
         [HttpPost]
         [ValidateInput(false)]
+<<<<<<< .merge_file_a02628
         public ActionResult suakh(KHACHHANG qlkh, FormCollection f)
+=======
+        public ActionResult suachude(CHUDE chudesach, FormCollection f)
+>>>>>>> .merge_file_a03968
         {
 
             if (ModelState.IsValid)
             {
+<<<<<<< .merge_file_a02628
                 db.Entry(qlkh).State = System.Data.EntityState.Modified;
                 db.SaveChanges();
             }
@@ -359,6 +339,17 @@ namespace WEBSITEBANSACH.Controllers
                 });
             return View("thongkedoanhthu", model);
         }
+       
+=======
+                db.Entry(chudesach).State = System.Data.EntityState.Modified;
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("chude");
+
+        }
+        
+>>>>>>> .merge_file_a03968
 
     }
 
