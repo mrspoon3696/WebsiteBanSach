@@ -8,7 +8,7 @@ namespace WEBSITEBANSACH.Controllers
 {
     public class GioithieuController : Controller
     {
-        //
+        //a
         // GET: /Gioithieu/
         public ActionResult gioithieu()
         {
